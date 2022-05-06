@@ -1,0 +1,11 @@
+prog4:	main.o
+	g++ main.o -o prog4
+
+main.o:	main.cpp newArray.h
+	g++ -c main.cpp
+
+clean:
+	rm -rf *.o prog4
+
+test:
+	prog4 < input.txt
